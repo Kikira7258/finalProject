@@ -1,0 +1,38 @@
+
+
+<main class="border-[#F8C8DC] border-2 mt-20 w-[20rem] mx-auto rounded-md p-4">
+    <h1 novalidate class="font-bold text-[30px] text-center">Contact us</h1>
+  
+    <form [formGroup]="reactiveForm!" (ngSubmit)="onSubmit()">
+    
+        
+        <div>
+    
+            <div class="mt-4">
+                <label for="fullname">Your Name</label><br>
+                <input class="border-[#F8C8DC] border-2 rounded-md w-full" type="text" formControlName="name" id="fullname" required [class.input-invalid]="name?.invalid && name?.touched"><br>
+                <span *ngIf="name?.invalid && name?.touched" class="text-red-500 text-sm">Name is required</span>
+            </div>
+        
+            <div class="mt-4">
+                <label for="email">Your Email</label><br>
+                <input class="border-[#F8C8DC] border-2 rounded-md w-full" type="email" formControlName="email" id="email" required [class.input-invalid]="email?.invalid && email?.touched">
+    
+                <span *ngIf="email?.invalid && email?.touched" class="text-red-500 text-sm">Email is required</span>
+            </div>
+        
+            <div class="text-container mt-4">
+                <p>Additional Details</p>
+                <textarea class="border-[#F8C8DC] border-2 rounded-md w-full" required formControlName="textArea" [class.input-invalid]="textArea?.invalid && textArea?.touched"></textarea>
+                <span *ngIf="textArea?.invalid && textArea?.touched" class="text-red-500 text-sm">Information required</span>
+            </div>
+        
+        </div> 
+    
+    
+      <button type="submit" class="sub-btn bg-[#F8C8DC] py-2 px-4 rounded-md mt-4" [disabled]="reactiveForm!.invalid">Send</button>
+      
+    </form>
+  
+  
+  </main>

@@ -1,0 +1,201 @@
+
+/* Header */
+
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+
+.shyrain {
+    font-family: Caveat;
+}
+
+.navMenu {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+/* Hot section carousel */
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px #F8C8DC;
+    height: 280px;
+    overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+
+.innerCarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.openCarousel:checked + .carouselItem {
+    position: static;
+    opacity: 100;
+}
+
+
+.carouselItem {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
+}
+
+
+.carouselItem img {
+    display: block;
+    /* height: auto; */
+    /* max-width: 100%; */
+}
+
+.control {
+    background: #F8C8DC;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+
+
+
+.control.prev {
+    left: 2%;
+}
+
+.control.next {
+    right: 2%;
+}
+
+.control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+
+#carousel1:checked ~ .control1,
+#carousel2:checked ~ .control2,
+#carousel3:checked ~ .control3 {
+    display: block;
+}
+
+
+
+.indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+
+
+.indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carouselDot {
+    counter-reset: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    margin-top: 5rem; 
+}
+
+
+.carouselDot:hover {
+    color: #fff;
+}
+
+#carousel1:checked ~ .control1 ~ .indicators li:nth-child(1) .carouselDot,
+#carousel2:checked ~ .control2 ~ .indicators li:nth-child(2) .carouselDot,
+#carousel3:checked ~ .control3 ~ .indicators li:nth-child(3) .carouselDot {
+    color: #F8C8DC;
+}
+
+
+
+/* #title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: sans-serif;
+    z-index: 1000;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+} */
+
+/* -------------------------------------------- */
+
+
+
+/* Right Nav */
+.fa-star, .fa-star-half {
+    color: orange;
+}
+
+/* .scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} */
+
+.scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
